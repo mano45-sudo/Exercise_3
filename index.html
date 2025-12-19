@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Exercise 3</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        /* Title */
+        .main-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        /* Main layout */
+        .container {
+            display: flex;
+            align-items: flex-start;
+            gap: 50px;
+        }
+
+        /* ---------- Problem 4 Navbar ---------- */
+        .navbar {
+            display: inline-block;
+            background-color: #333;
+            margin-bottom: 30px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            display: block;
+            padding: 10px 16px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar ul li a:hover {
+            color: #1e90ff;
+        }
+
+        .navbar ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 140px;
+        }
+
+        .navbar ul li ul li {
+            display: block;
+        }
+
+        .navbar ul li ul li a {
+            padding: 8px 12px;
+            color: white;
+        }
+
+        .navbar ul li ul li a:hover {
+            color: #1e90ff;
+        }
+
+        .navbar ul li:hover ul {
+            display: block;
+        }
+
+        /* ---------- Problem 5 Vertical Menu ---------- */
+        .menu {
+            width: 200px;
+            background-color: #2f2f2f;
+        }
+
+        .menu a {
+            display: block;
+            padding: 12px 16px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #3d3d3d;
+        }
+
+        .menu a:hover {
+            background-color: #00bcd4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== MAIN TITLE ===== -->
+    <div class="main-title">Exercise 3</div>
+
+    <div class="container">
+
+        <!-- ================= LEFT SIDE ================= -->
+        <div>
+
+            <h3>Problem 1</h3>
+            <div style="width:80px; height:80px; background-color:red; margin-bottom:10px;"></div>
+            <div style="width:80px; height:80px; background-color:red;"></div>
+
+            <h3 style="margin-top:20px;">Problem 2</h3>
+            <div style="display:inline-block; width:80px; height:80px; background-color:red; margin-right:10px;"></div>
+            <div style="display:inline-block; width:80px; height:80px; background-color:red;"></div>
+
+            <h3 style="margin-top:30px;">Problem 3</h3>
+
+            <form style="
+                width:380px;
+                padding:20px;
+                background-color:white;
+                box-shadow:0px 0px 10px rgba(0,0,0,0.15);
+            ">
+
+                <h2 style="margin:0 0 15px 0;">Login</h2>
+
+                <label>Username</label><br>
+                <input type="text" placeholder="Enter your username"
+                       style="width:100%; padding:8px; margin:6px 0 14px 0;" required>
+
+                <label>Password</label><br>
+                <input type="password" placeholder="Enter your password"
+                       style="width:100%; padding:8px; margin:6px 0 6px 0;" required>
+
+                <input type="checkbox" id="show">
+                <label for="show" style="font-size:13px;">Show Password</label><br><br>
+
+                <input type="submit" value="Login"
+                       style="
+                           width:100%;
+                           padding:10px;
+                           background-color:#1e90ff;
+                           color:white;
+                           border:none;
+                           cursor:pointer;
+                       ">
+
+                <p style="font-size:13px; margin:10px 0 0 0;">
+                    <a href="#" style="text-decoration:none; color:#1e90ff;">
+                        Forgot Password?
+                    </a>
+                </p>
+            </form>
+
+        </div>
+
+        <!-- ================= RIGHT SIDE ================= -->
+        <div>
+
+            <h3>Problem 4</h3>
+
+            <div class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+
+                    <li>
+                        <a href="#">Services</a>
+                        <ul>
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">SEO</a></li>
+                            <li><a href="#">Marketing</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">About</a>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">Contact</a>
+                        <ul>
+                            <li><a href="#">Email</a></li>
+                            <li><a href="#">Phone</a></li>
+                            <li><a href="#">Location</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>Problem 5</h3>
+
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">About</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Contact</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
